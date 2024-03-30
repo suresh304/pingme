@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import useConversation from '../../zustand/useConversation'
 
-const MessageInput = (recieverId) => {
+const MessageInput = () => {
 
-    const [loading,setLoading] = useState(false)
+    const [setLoading] = useState(false)
   const {selectedConvo,messages,setMessages} = useConversation()
 
     const [msg,setMsg] = useState()
@@ -32,13 +32,7 @@ const MessageInput = (recieverId) => {
         }
 
     }
-// const enterHandler = (e) =>{
-//     if(e.code == "Enter"){
-//         sendMessage()
-//         document.getElementsByClassName("messages")[0].scrollTo(0, document.body.scrollHeight)
-//     }
 
-// }
 
 useEffect(()=>{
     document.getElementsByClassName("messages")[0].scrollTo(0, 3000)
